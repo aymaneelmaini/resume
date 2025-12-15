@@ -1,0 +1,185 @@
+%-------------------------
+% CV en Latex
+% Auteur : Aymane El Maini
+% Version : https://github.com/AymaneTech/resume
+% Modèle original : https://github.com/sb2nov/resume
+% Licence : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Marges
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Format des sections
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Commandes personnalisées
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ : #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  DÉBUT DU CV  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------EN-TÊTE-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  {\Large \textbf{Aymane El Maini}} & {\Large \textbf{Développeur Logiciel}} \\
+\end{tabular*}
+
+\vspace{2pt}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \href{https://github.com/AymaneTech}{github.com/AymaneTech} &
+  \href{mailto:elmainiaymane03@gmail.com}{elmainiaymane03@gmail.com} \\
+  \href{https://linkedin.com/in/aymane-el-maini}{linkedin.com/in/aymane-el-maini} &
+  Mobile : +212-714-934-362 \\
+  Localisation : Marrakech, Maroc & \\
+\end{tabular*}
+
+%-----------EXPÉRIENCE-----------------
+\section{Expérience professionnelle}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {ProgressSoft Corporation}{Jordanie (Télétravail)}
+    {Développeur Logiciel Associé}{Nov. 2024 -- Présent}
+    \resumeItemListStart
+      \resumeItem{PayHub}
+        {Participation au développement de PayHub, une plateforme de paiement d’entreprise de référence dans la région MENA, en concevant et maintenant des API backend et des microservices pour le traitement de paiements internationaux, incluant les intégrations SWIFT et Visa.}
+      \resumeItem{Services financiers}
+        {Conception de services financiers sécurisés et évolutifs en Java et Kotlin avec Spring Boot, en appliquant les principes du Domain-Driven Design pour des institutions bancaires.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Foodeals}{Fès, Maroc}
+    {Stagiaire Développeur Full Stack}{Mai 2024 -- Août 2024}
+    \resumeItemListStart
+      \resumeItem{Développement Full Stack}
+        {Développement d’applications full stack avec Spring Boot côté backend et Angular côté frontend, incluant la conception d’API REST et d’interfaces utilisateur responsives.}
+      \resumeItem{DevOps \& Conteneurisation}
+        {Conteneurisation des applications avec Docker et collaboration en équipe via Git pour le contrôle de version.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ICF Communication}{Marrakech, Maroc}
+    {Stagiaire Développeur Front-end}{Avr. 2023 -- Juin 2023}
+    \resumeItemListStart
+      \resumeItem{Développement Web}
+        {Réalisation d’applications web responsives avec HTML5, JavaScript, CSS3 et Tailwind CSS, en mettant l’accent sur l’ergonomie et les performances.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------FORMATION-----------------
+\section{Formation}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {YouCode - UM6P}{Safi, Maroc}
+    {Diplôme en Génie Logiciel}{2023 -- 2025}
+  \resumeSubheading
+    {Ecotstig}{Marrakech, Maroc}
+    {Études en Génie Logiciel}{2022 -- 2023}
+\resumeSubHeadingListEnd
+
+%-----------PROJETS-----------------
+\section{Projets}
+\resumeSubHeadingListStart
+  \resumeSubItem{\href{https://github.com/AymaneTech/klox}{Klox — Interpréteur Java}}
+    {Interpréteur de type tree-walk implémenté en Kotlin, basé sur l’ouvrage Crafting Interpreters. Support des variables, structures de contrôle, fonctions, fermetures et POO.}
+  \resumeSubItem{\href{https://github.com/aymanetech/clox}{Clox — Interpréteur en C}}
+    {Compilateur bytecode et machine virtuelle à pile écrits en C, couvrant la tokenisation, la compilation, l’exécution, l’allocation mémoire et le garbage collector. Tests réalisés avec Criterion.}
+  \resumeSubItem{\href{https://github.com/AymaneTech/linkupp}{LinkUp — Plateforme de mise en relation}}
+    {Backend Spring Boot et Kotlin basé sur le DDD et une architecture functional core / imperative shell. PostgreSQL, Docker, CI/CD GitHub Actions et application mobile React Native. Tests avec Kotest.}
+\resumeSubHeadingListEnd
+
+%-----------COMPÉTENCES-----------------
+\section{Compétences}
+\resumeSubHeadingListStart
+  \item{
+    \textbf{Programmation}{ : Java, Kotlin, C/C++, Go, TypeScript, JavaScript, PHP}
+  }
+  \item{
+    \textbf{Backend}{ : Spring Boot, Spring Data, JPA, Hibernate, Exposed ORM, REST, JEE}
+  }
+  \item{
+    \textbf{Frontend}{ : Angular, React, Next.js, HTML5, CSS3, Tailwind CSS}
+  }
+  \item{
+    \textbf{Bases de données}{ : PostgreSQL, Oracle, MSSQL, MySQL, MongoDB, Oracle AQ}
+  }
+  \item{
+    \textbf{Tests}{ : JUnit 5, Mockito, Kotest, Criterion, Testcontainers, TDD}
+  }
+  \item{
+    \textbf{DevOps}{ : Docker, Kubernetes, GitHub Actions, AWS, GCP, Linux}
+  }
+  \item{
+    \textbf{Architecture}{ : DDD, Microservices, Programmation Fonctionnelle, Design Patterns}
+  }
+\resumeSubHeadingListEnd
+
+%-----------LANGUES-----------------
+\section{Langues}
+\resumeSubHeadingListStart
+  \item{
+    \textbf{Arabe}{ : Langue maternelle} \quad
+    \textbf{Anglais}{ : Intermédiaire} \quad
+    \textbf{Français}{ : Intermédiaire}
+  }
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
+
